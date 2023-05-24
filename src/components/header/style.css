@@ -1,0 +1,7 @@
+.Header_body {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 0.5px solid rgba(147, 143, 143, 0.5);
+}

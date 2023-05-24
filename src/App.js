@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Layout from "./components/layout/Layout";
+import Header from "./components/header/Header";
+import Form from "./components/form/Form";
+import List from "./components/list/List";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
 
+    const [todos, setTodos] = useState([
+        {
+            id: 1,
+            title: "리액트 공부하기",
+            body: "리액트 기초를 공부해봅시다.",
+            isDone: false
+        },
+        {
+            id: 2,
+            title: "리액트 공부하기",
+            body: "리액트 기초를 공부해봅시다.",
+            isDone: true
+        }
+    ]);
+
+    return (
+        <Layout>
+            <Header />
+            <Form todos={todos} setTodos={setTodos}/>
+            <List todos={todos} setTodos={setTodos}/>
+        </Layout>
+    );
+};
 export default App;

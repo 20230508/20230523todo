@@ -1,0 +1,40 @@
+.todoList {
+    border: 4px solid teal;
+    border-radius: 12px;
+    padding: 12px 24px 24px;
+    width: 270px;
+}
+
+.todoName {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.buttonSet {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.todoList > .buttonSet > button {
+    border-radius: 8px;
+    cursor: pointer;
+    height: 40px;
+    width: 50%;
+
+}
+
+.delet_button {
+    background-color: #fff;
+    border: 2px solid red;
+}
+
+.complete_button {
+    background-color: #fff;
+    border: 2px solid green;
+}
